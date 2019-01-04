@@ -18,11 +18,26 @@ Requirements
  - Qt5 (including the following components):
     - Qt5Core, Qt5Gui, Qt5Widgets, Qt5Svg
  - Qwt (>= 6.1.2)
+ - NodeEditor/QtNodes (from https://github.com/knarfS/nodeeditor.git, Branch smuview)
  - libsigrokcxx >= 0.6.0 (libsigrok C++ bindings)
 
 
 Building and installing
 -----------------------
+
+Build NodeEditor:
+
+ $ git clone https://github.com/knarfS/nodeeditor.git
+ $ cd nodeeditor
+ $ git checkout smuview
+ $ mkdir build
+ $ cd build
+ $ cmake ../
+ $ make
+ $ sudo make install
+
+Build newest Sigrok libraries libserialport and libsigrok, see:
+https://sigrok.org/wiki/Linux
 
 In order to get the SmuView source code and build it, run:
 
