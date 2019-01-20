@@ -20,9 +20,9 @@ install:
 
 script:
   # Build qwt
-  - wget https://sourceforge.net/projects/qwt/files/qwt/6.1.4/qwt-6.1.4.tar.bz2/download
-  - tar xf qwt-6.1.4.tar.bz2
-  - cd qwt-6.1.4
+  - wget "https://sourceforge.net/projects/qwt/files/qwt/6.1.4/qwt-6.1.4.tar.bz2/download" --trust-server-names
+  - tar xf qwt-*.tar.bz2
+  - cd qwt-*/
   - qmake qwt.pro
   - make -j$(nproc)
   - sudo make install
